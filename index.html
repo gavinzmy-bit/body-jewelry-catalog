@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASTM F136 Titanium Body Jewelry - Wholesale Catalog & Price List</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white text-xs sm:text-sm py-2 px-4 text-center flex items-center justify-center gap-3">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+      <i class="fa-solid fa-shield-halved mr-1"></i> ASTM F136 Implant Grade
+    </span>
+    <span>Factory Direct Wholesale Price List • Global Air Cargo Shipping</span>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 shadow-sm transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
+          <i class="fa-solid fa-gem text-lg"></i>
+        </div>
+        <div>
+          <h1 class="text-base sm:text-lg font-bold tracking-tight text-slate-900 leading-tight">
+            Titanium Body Jewelry
+          </h1>
+          <p class="text-xs text-slate-500 hidden sm:block">Wholesale Price List & Digital Catalog</p>
+        </div>
+      </div>
+
+      <!-- Controls: Currency, Price Visibility, Inquiry Cart -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Currency Selector -->
+        <div class="relative inline-block text-left">
+          <select id="currencySelector" class="bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm rounded-lg px-2.5 py-1.5 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <option value="USD">USD ($)</option>
+            <option value="RMB">RMB (¥)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+
+        <!-- Toggle Price Visibility -->
+        <button id="togglePriceBtn" title="Toggle Price Visibility" class="p-2 rounded-lg border border-slate-200 bg-white text-slate-600 hover:text-indigo-600 hover:bg-slate-50 transition shadow-sm text-sm">
+          <i class="fa-solid fa-eye" id="priceEyeIcon"></i>
+        </button>
+
+        <!-- Inquiry Cart Button -->
+        <button id="openCartBtn" class="relative inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold shadow-md shadow-indigo-500/25 transition">
+          <i class="fa-solid fa-clipboard-list text-base"></i>
+          <span class="hidden sm:inline">Inquiry List</span>
+          <span id="cartCountBadge" class="bg-rose-500 text-white text-[11px] font-bold px-1.5 py-0.2 rounded-full min-w-[20px] text-center">0</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Search & Filter Ribbon -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 border-t border-slate-100">
+      
+      <!-- Search Input -->
+      <div class="relative flex-1 max-w-lg">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+        <input type="text" id="searchInput" placeholder="Search by Model / Code / Spec (e.g. 16G, 1.2x8mm, V33FA)..." 
+          class="w-full pl-10 pr-9 py-2 bg-slate-100/80 hover:bg-slate-100 focus:bg-white border border-transparent focus:border-indigo-400 text-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition">
+        <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+          <i class="fa-solid fa-circle-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Sort & Total Count -->
+      <div class="flex items-center justify-between md:justify-end gap-3 text-xs sm:text-sm text-slate-500">
+        <span id="resultCountText" class="font-medium text-slate-700">Loading products...</span>
+        
+        <select id="sortSelector" class="bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm rounded-lg px-2 py-1.5 font-medium shadow-sm focus:outline-none">
+          <option value="default">Default Order</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Category Tabs Carousel -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-2 overflow-x-auto custom-scrollbar flex items-center gap-1.5 scroll-smooth whitespace-nowrap" id="categoryNav">
+      <!-- Injected via JS -->
+    </div>
+  </header>
+
+  <!-- Main Content Grid -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+      <!-- Product Cards Injected Here -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden py-16 text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-2xl">
+        <i class="fa-solid fa-box-open"></i>
+      </div>
+      <h3 class="text-base font-semibold text-slate-800">No products found</h3>
+      <p class="text-sm text-slate-500 mt-1">Try searching with a different keyword or select another category.</p>
+      <button id="resetFilterBtn" class="mt-4 px-4 py-2 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-lg hover:bg-indigo-100 transition">
+        Reset All Filters
+      </button>
+    </div>
+
+    <!-- Pagination / Load More -->
+    <div id="paginationContainer" class="mt-8 pb-12 flex flex-col items-center justify-center gap-3">
+      <button id="loadMoreBtn" class="px-6 py-2.5 bg-white border border-slate-300 hover:border-indigo-500 text-slate-700 hover:text-indigo-600 font-semibold text-sm rounded-xl shadow-sm transition flex items-center gap-2">
+        <span>Load More Products</span>
+        <i class="fa-solid fa-chevron-down text-xs"></i>
+      </button>
+      <p id="pageIndicator" class="text-xs text-slate-400">Showing 48 of 3,000+ items</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2026 Titanium Body Jewelry Wholesale. All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-certificate text-emerald-500 mr-1"></i> Mill Certificate Available</span>
+        <span><i class="fa-brands fa-whatsapp text-emerald-500 mr-1"></i> Fast Quotation Support</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      <button id="closeModalBtn" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-slate-900/60 text-white hover:bg-slate-900 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="bg-slate-100 p-6 flex items-center justify-center min-h-[300px]">
+          <img id="modalImage" src="" alt="Product Detail" class="max-h-[320px] max-w-full object-contain rounded-lg drop-shadow-md">
+        </div>
+        <div class="p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span id="modalCategory" class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-50 text-indigo-600">Category</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-600">ASTM F136</span>
+            </div>
+            <h3 id="modalCode" class="text-lg font-bold text-slate-900 leading-snug">Product Code</h3>
+            <p id="modalSheet" class="text-xs text-slate-400 mt-0.5"></p>
+            
+            <div class="mt-4 pt-4 border-t border-slate-100">
+              <div class="text-xs text-slate-500 font-medium">Wholesale Price:</div>
+              <div id="modalPrice" class="text-2xl font-black text-indigo-600 mt-0.5">$0.00</div>
+            </div>
+
+            <div class="mt-4">
+              <div class="text-xs font-semibold text-slate-700 mb-1.5">Available Specs & Sizes:</div>
+              <div id="modalSpecs" class="max-h-36 overflow-y-auto custom-scrollbar flex flex-wrap gap-1.5 text-xs">
+                <!-- specs pills -->
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
+            <button id="modalAddCartBtn" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-xl shadow-md transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-plus"></i> Add to Inquiry List
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inquiry Cart Drawer -->
+  <div id="cartDrawer" class="fixed inset-y-0 right-0 z-50 w-full sm:w-96 bg-white shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Drawer Header -->
+    <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-clipboard-list text-indigo-600 text-lg"></i>
+        <h3 class="font-bold text-slate-900 text-sm">Your Inquiry List</h3>
+        <span id="drawerBadge" class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2 py-0.5 rounded-full">0 items</span>
+      </div>
+      <button id="closeCartBtn" class="w-8 h-8 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-base"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Content / Items List -->
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar">
+      <!-- Injected via JS -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-4 border-t border-slate-200 bg-slate-50 space-y-3">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-slate-500 font-medium">Estimated Total:</span>
+        <span id="cartTotalAmount" class="text-lg font-bold text-indigo-600">$0.00</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2">
+        <button id="exportCsvBtn" class="py-2.5 bg-white border border-slate-300 hover:border-slate-400 text-slate-700 text-xs font-semibold rounded-xl shadow-sm transition flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-file-excel text-emerald-600"></i> Export Excel/CSV
+        </button>
+        <button id="copyInquiryBtn" class="py-2.5 bg-white border border-slate-300 hover:border-slate-400 text-slate-700 text-xs font-semibold rounded-xl shadow-sm transition flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-copy text-indigo-600"></i> Copy Text
+        </button>
+      </div>
+
+      <button id="sendWhatsappBtn" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md shadow-emerald-500/20 transition flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-base"></i> Send Inquiry via WhatsApp
+      </button>
+
+      <button id="clearCartBtn" class="w-full text-center text-xs text-rose-500 hover:underline pt-1">
+        Clear All Items
+      </button>
+    </div>
+  </div>
+  <div id="cartBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden backdrop-blur-[2px]"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-medium px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 transform translate-y-20 opacity-0 transition-all duration-200 pointer-events-none">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base" id="toastIcon"></i>
+    <span id="toastMsg">Notification message</span>
+  </div>
+
+  <!-- Load Data and Application Script -->
+  <script src="data.js"></script>
+  <script>
+    // State
+    const state = {
+      products: typeof CATALOG_PRODUCTS !== 'undefined' ? CATALOG_PRODUCTS : [],
+      activeCategory: 'all',
+      searchKeyword: '',
+      sortOrder: 'default',
+      currency: 'USD',
+      exchangeRates: { USD: 1.0, RMB: 7.2, EUR: 0.92 },
+      currencySymbols: { USD: '$', RMB: '¥', EUR: '€' },
+      showPrice: true,
+      cart: JSON.parse(localStorage.getItem('catalog_inquiry_cart') || '[]'),
+      pageSize: 48,
+      currentPage: 1
+    };
+
+    // Category mapping
+    const CATEGORIES = [
+      { id: 'all', name: 'All Products', icon: 'fa-cubes' },
+      { id: '唇钉', name: 'Labret Studs (唇钉)', icon: 'fa-gem' },
+      { id: '圈圈', name: 'Hoops & Clickers (圈圈)', icon: 'fa-circle-notch' },
+      { id: '引导针', name: 'Tapers & Needles (引导针)', icon: 'fa-syringe' },
+      { id: '肚脐环', name: 'Belly Rings (肚脐环)', icon: 'fa-ring' },
+      { id: '杠铃', name: 'Barbells (杠铃)', icon: 'fa-bolt' },
+      { id: '配件', name: 'Accessories (配件)', icon: 'fa-puzzle-piece' },
+      { id: '价格索引表', name: 'Featured Index (精选)', icon: 'fa-star' }
+    ];
+
+    // DOM Elements
+    const productGrid = document.getElementById('productGrid');
+    const categoryNav = document.getElementById('categoryNav');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const sortSelector = document.getElementById('sortSelector');
+    const currencySelector = document.getElementById('currencySelector');
+    const togglePriceBtn = document.getElementById('togglePriceBtn');
+    const priceEyeIcon = document.getElementById('priceEyeIcon');
+    const resultCountText = document.getElementById('resultCountText');
+    const emptyState = document.getElementById('emptyState');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const paginationContainer = document.getElementById('paginationContainer');
+    const pageIndicator = document.getElementById('pageIndicator');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
+
+    // Cart Elements
+    const openCartBtn = document.getElementById('openCartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartBackdrop = document.getElementById('cartBackdrop');
+    const cartItemsList = document.getElementById('cartItemsList');
+    const cartCountBadge = document.getElementById('cartCountBadge');
+    const drawerBadge = document.getElementById('drawerBadge');
+    const cartTotalAmount = document.getElementById('cartTotalAmount');
+    const clearCartBtn = document.getElementById('clearCartBtn');
+    const copyInquiryBtn = document.getElementById('copyInquiryBtn');
+    const exportCsvBtn = document.getElementById('exportCsvBtn');
+    const sendWhatsappBtn = document.getElementById('sendWhatsappBtn');
+
+    // Modal Elements
+    const lightboxModal = document.getElementById('lightboxModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalImage = document.getElementById('modalImage');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalCode = document.getElementById('modalCode');
+    const modalSheet = document.getElementById('modalSheet');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalSpecs = document.getElementById('modalSpecs');
+    const modalAddCartBtn = document.getElementById('modalAddCartBtn');
+    let currentModalProduct = null;
+
+    // Format Price
+    function formatPrice(valUsd) {
+      if (!state.showPrice) return '***';
+      if (valUsd === null || valUsd === undefined) return 'Inquire';
+      const rate = state.exchangeRates[state.currency] || 1.0;
+      const sym = state.currencySymbols[state.currency] || '$';
+      const converted = valUsd * rate;
+      return `${sym}${converted.toFixed(2)}`;
+    }
+
+    // Initialize Categories
+    function initCategories() {
+      categoryNav.innerHTML = '';
+      CATEGORIES.forEach(cat => {
+        const count = cat.id === 'all' 
+          ? state.products.length 
+          : state.products.filter(p => p.sheet.includes(cat.id) || p.category_en.toLowerCase().includes(cat.id.toLowerCase())).length;
+        
+        const btn = document.createElement('button');
+        btn.className = `px-3.5 py-1.5 rounded-full text-xs font-semibold transition flex items-center gap-1.5 whitespace-nowrap ${
+          state.activeCategory === cat.id 
+            ? 'bg-slate-900 text-white shadow-sm' 
+            : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+        }`;
+        btn.innerHTML = `<i class="fa-solid ${cat.icon} text-[11px]"></i> <span>${cat.name}</span> <span class="text-[10px] opacity-70">(${count})</span>`;
+        btn.onclick = () => {
+          state.activeCategory = cat.id;
+          state.currentPage = 1;
+          initCategories();
+          render();
+        };
+        categoryNav.appendChild(btn);
+      });
+    }
+
+    // Filter and Sort Products
+    function getFilteredProducts() {
+      let list = state.products;
+
+      // Filter by category
+      if (state.activeCategory !== 'all') {
+        list = list.filter(p => p.sheet.includes(state.activeCategory) || p.category_en.toLowerCase().includes(state.activeCategory.toLowerCase()));
+      }
+
+      // Filter by search keyword
+      if (state.searchKeyword) {
+        const q = state.searchKeyword.toLowerCase();
+        list = list.filter(p => {
+          const matchCode = p.code && p.code.toLowerCase().includes(q);
+          const matchSheet = p.sheet && p.sheet.toLowerCase().includes(q);
+          const matchNo = p.no && p.no.toLowerCase().includes(q);
+          const matchSpecs = p.specs && p.specs.some(s => s.toLowerCase().includes(q));
+          return matchCode || matchSheet || matchNo || matchSpecs;
+        });
+      }
+
+      // Sort
+      if (state.sortOrder === 'price-asc') {
+        list = [...list].sort((a, b) => (a.price_usd || 0) - (b.price_usd || 0));
+      } else if (state.sortOrder === 'price-desc') {
+        list = [...list].sort((a, b) => (b.price_usd || 0) - (a.price_usd || 0));
+      }
+
+      return list;
+    }
+
+    // Render Product Grid
+    function render() {
+      const filtered = getFilteredProducts();
+      resultCountText.textContent = `Found ${filtered.length.toLocaleString()} items`;
+
+      if (filtered.length === 0) {
+        productGrid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        paginationContainer.classList.add('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      paginationContainer.classList.remove('hidden');
+
+      const itemsToShow = filtered.slice(0, state.currentPage * state.pageSize);
+      
+      productGrid.innerHTML = itemsToShow.map(p => {
+        const imgSrc = p.image ? `images/${p.image}` : 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="%23cbd5e1" stroke-width="1.5"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>';
+        const specSummary = p.specs && p.specs.length > 0 ? p.specs[0].split('\n')[0] : 'ASTM F136';
+        
+        return `
+          <div class="bg-white rounded-xl border border-slate-200/80 hover:border-indigo-400 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col group">
+            
+            <!-- Image Area -->
+            <div class="relative bg-slate-50 aspect-square overflow-hidden cursor-pointer flex items-center justify-center p-3" onclick="openLightbox('${p.id}')">
+              <img src="${imgSrc}" alt="${p.code}" loading="lazy" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+              
+              <!-- Category Badge -->
+              <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-white/90 backdrop-blur-sm text-slate-700 shadow-sm border border-slate-200/50">
+                ${p.sheet}
+              </span>
+
+              <!-- Hover Zoom Hint -->
+              <div class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="p-2 rounded-full bg-white/90 text-slate-800 text-xs shadow-md"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+              </div>
+            </div>
+
+            <!-- Info Area -->
+            <div class="p-3 sm:p-3.5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-1 text-slate-900">
+                  <h4 class="font-bold text-xs sm:text-sm tracking-tight truncate" title="${p.code}">${p.code}</h4>
+                  <button onclick="copyText('${p.code}')" class="text-slate-400 hover:text-indigo-600 text-xs transition" title="Copy Product Code">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+                
+                <p class="text-[11px] text-slate-500 truncate mt-0.5" title="${specSummary}">
+                  <i class="fa-solid fa-ruler-combined text-[10px] mr-1 text-slate-400"></i>${specSummary}
+                </p>
+              </div>
+
+              <!-- Price & Add Action -->
+              <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] text-slate-400 font-medium">Wholesale</div>
+                  <div class="text-sm sm:text-base font-black text-indigo-600 leading-tight">
+                    ${formatPrice(p.price_usd)}
+                  </div>
+                </div>
+
+                <button onclick="addToCart('${p.id}')" class="w-8 h-8 rounded-lg bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white flex items-center justify-center transition shadow-sm" title="Add to Inquiry List">
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Update Pagination button
+      if (itemsToShow.length >= filtered.length) {
+        loadMoreBtn.classList.add('hidden');
+        pageIndicator.textContent = `Showing all ${filtered.length.toLocaleString()} products`;
+      } else {
+        loadMoreBtn.classList.remove('hidden');
+        pageIndicator.textContent = `Showing ${itemsToShow.length.toLocaleString()} of ${filtered.length.toLocaleString()} products`;
+      }
+    }
+
+    // Lightbox Modal
+    window.openLightbox = function(id) {
+      const p = state.products.find(item => item.id === id);
+      if (!p) return;
+      currentModalProduct = p;
+      
+      modalImage.src = p.image ? `images/${p.image}` : '';
+      modalCategory.textContent = p.category_en;
+      modalCode.textContent = p.code;
+      modalSheet.textContent = `Catalog Section: ${p.sheet} (Item #${p.no || 'N/A'})`;
+      modalPrice.textContent = formatPrice(p.price_usd);
+      
+      modalSpecs.innerHTML = '';
+      if (p.specs && p.specs.length > 0) {
+        p.specs.forEach(s => {
+          s.split('\n').forEach(line => {
+            if (line.trim()) {
+              const span = document.createElement('span');
+              span.className = 'px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700';
+              span.textContent = line.trim();
+              modalSpecs.appendChild(span);
+            }
+          });
+        });
+      } else {
+        modalSpecs.innerHTML = '<span class="text-slate-400">Standard piercing specifications</span>';
+      }
+
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+    };
+
+    closeModalBtn.onclick = () => {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+    };
+    lightboxModal.onclick = (e) => {
+      if (e.target === lightboxModal) closeModalBtn.click();
+    };
+
+    modalAddCartBtn.onclick = () => {
+      if (currentModalProduct) {
+        addToCart(currentModalProduct.id);
+        closeModalBtn.click();
+      }
+    };
+
+    // Inquiry Cart Management
+    window.addToCart = function(id) {
+      const p = state.products.find(item => item.id === id);
+      if (!p) return;
+
+      const existing = state.cart.find(c => c.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        state.cart.push({
+          id: p.id,
+          code: p.code,
+          sheet: p.sheet,
+          price: p.price_usd || 0,
+          image: p.image,
+          spec: p.specs && p.specs.length > 0 ? p.specs[0].split('\n')[0] : '',
+          qty: 1
+        });
+      }
+
+      saveCart();
+      updateCartUI();
+      showToast(`Added ${p.code} to inquiry list`);
+    };
+
+    function saveCart() {
+      localStorage.setItem('catalog_inquiry_cart', JSON.stringify(state.cart));
+    }
+
+    function updateCartUI() {
+      const count = state.cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCountBadge.textContent = count;
+      drawerBadge.textContent = `${count} items`;
+
+      const totalUsd = state.cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      cartTotalAmount.textContent = formatPrice(totalUsd);
+
+      if (state.cart.length === 0) {
+        cartItemsList.innerHTML = `
+          <div class="py-12 text-center text-slate-400">
+            <i class="fa-solid fa-cart-arrow-down text-3xl mb-2"></i>
+            <p class="text-xs">Your inquiry list is empty.</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartItemsList.innerHTML = state.cart.map(item => `
+        <div class="bg-white rounded-xl border border-slate-200 p-2.5 flex items-center gap-3 shadow-sm">
+          <img src="${item.image ? 'images/' + item.image : ''}" class="w-12 h-12 object-contain rounded bg-slate-50 border border-slate-100 flex-shrink-0">
+          <div class="flex-1 min-w-0">
+            <h5 class="text-xs font-bold text-slate-800 truncate">${item.code}</h5>
+            <p class="text-[10px] text-slate-400 truncate">${item.spec || item.sheet}</p>
+            <div class="text-xs font-semibold text-indigo-600 mt-0.5">${formatPrice(item.price)}</div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button onclick="changeQty('${item.id}', -1)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-xs">-</button>
+            <span class="text-xs font-semibold w-5 text-center">${item.qty}</span>
+            <button onclick="changeQty('${item.id}', 1)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-xs">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.changeQty = function(id, delta) {
+      const item = state.cart.find(c => c.id === id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        state.cart = state.cart.filter(c => c.id !== id);
+      }
+      saveCart();
+      updateCartUI();
+    };
+
+    clearCartBtn.onclick = () => {
+      if (confirm('Clear all items from your inquiry list?')) {
+        state.cart = [];
+        saveCart();
+        updateCartUI();
+      }
+    };
+
+    // Open/Close Cart
+    function toggleCart(open) {
+      if (open) {
+        cartDrawer.classList.remove('translate-x-full');
+        cartBackdrop.classList.remove('hidden');
+      } else {
+        cartDrawer.classList.add('translate-x-full');
+        cartBackdrop.classList.add('hidden');
+      }
+    }
+    openCartBtn.onclick = () => toggleCart(true);
+    closeCartBtn.onclick = () => toggleCart(false);
+    cartBackdrop.onclick = () => toggleCart(false);
+
+    // Copy Text
+    window.copyText = function(text) {
+      navigator.clipboard.writeText(text);
+      showToast(`Copied "${text}" to clipboard`);
+    };
+
+    // Export CSV
+    exportCsvBtn.onclick = () => {
+      if (state.cart.length === 0) return alert('Inquiry list is empty.');
+      let csv = 'Product Code,Category,Specification,Wholesale Price (USD),Quantity,Subtotal (USD)\n';
+      state.cart.forEach(item => {
+        const sub = (item.price * item.qty).toFixed(2);
+        csv += `"${item.code}","${item.sheet}","${item.spec}",${item.price},${item.qty},${sub}\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Product_Inquiry_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Exported Inquiry CSV successfully');
+    };
+
+    // Copy Inquiry Text
+    copyInquiryBtn.onclick = () => {
+      if (state.cart.length === 0) return alert('Inquiry list is empty.');
+      let txt = `=== Product Inquiry Order ===\nDate: ${new Date().toLocaleDateString()}\n\n`;
+      state.cart.forEach((item, idx) => {
+        txt += `${idx+1}. Code: ${item.code} | Spec: ${item.spec} | Qty: ${item.qty} pcs\n`;
+      });
+      txt += `\nTotal Items: ${state.cart.reduce((s, i) => s + i.qty, 0)} pcs\nPlease send official proforma invoice with lead time!`;
+      navigator.clipboard.writeText(txt);
+      showToast('Inquiry list text copied to clipboard');
+    };
+
+    // WhatsApp Direct Send
+    sendWhatsappBtn.onclick = () => {
+      if (state.cart.length === 0) return alert('Inquiry list is empty.');
+      let txt = `Hi, I am interested in ordering the following titanium jewelry:\n\n`;
+      state.cart.forEach((item, idx) => {
+        txt += `${idx+1}. ${item.code} (${item.spec}) x ${item.qty} pcs\n`;
+      });
+      txt += `\nPlease quote best FOB price and lead time!`;
+      const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(txt)}`;
+      window.open(url, '_blank');
+    };
+
+    // Toast
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // Search and Filters Event Handlers
+    searchInput.oninput = (e) => {
+      state.searchKeyword = e.target.value.trim();
+      clearSearchBtn.classList.toggle('hidden', !state.searchKeyword);
+      state.currentPage = 1;
+      render();
+    };
+
+    clearSearchBtn.onclick = () => {
+      searchInput.value = '';
+      state.searchKeyword = '';
+      clearSearchBtn.classList.add('hidden');
+      state.currentPage = 1;
+      render();
+    };
+
+    sortSelector.onchange = (e) => {
+      state.sortOrder = e.target.value;
+      state.currentPage = 1;
+      render();
+    };
+
+    currencySelector.onchange = (e) => {
+      state.currency = e.target.value;
+      render();
+      updateCartUI();
+    };
+
+    togglePriceBtn.onclick = () => {
+      state.showPrice = !state.showPrice;
+      priceEyeIcon.className = state.showPrice ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash text-rose-500';
+      render();
+      updateCartUI();
+      showToast(state.showPrice ? 'Price is visible' : 'Price is hidden (Privacy mode)');
+    };
+
+    loadMoreBtn.onclick = () => {
+      state.currentPage += 1;
+      render();
+    };
+
+    resetFilterBtn.onclick = () => {
+      searchInput.value = '';
+      state.searchKeyword = '';
+      state.activeCategory = 'all';
+      state.sortOrder = 'default';
+      state.currentPage = 1;
+      initCategories();
+      render();
+    };
+
+    // Startup
+    initCategories();
+    render();
+    updateCartUI();
+  </script>
+</body>
+</html>
